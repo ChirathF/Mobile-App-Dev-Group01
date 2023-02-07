@@ -18,6 +18,21 @@
             android:name=".ViewIncomeActivity"
             android:exported="false" />
         <activity
+
+            android:name=".AddExpense"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AddIncome"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ViewExpenseActivity"
             android:exported="false" />
         <activity
