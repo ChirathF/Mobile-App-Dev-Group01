@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/layout/activity_home_screen.xml" value="0.11302083333333333" />
+        <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/drawable/ic_arrow.xml" value="0.197" />
+        <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
         <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/layout/activity_main.xml" value="0.17028985507246377" />
       </map>
     </option>
