@@ -1,20 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".HomeScreenActivity"
     android:layout_gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Budget Tracker"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:emojiCompatEnabled="false"
+            app:fontFamily="@font/allan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title"
+            android:text="Track your all transactions"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/allan" />
+
+    </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/balance_layout_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="250dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         app:cardBackgroundColor="@color/purple_200"
         app:cardCornerRadius="12dp"
@@ -25,15 +60,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right">
+
             <ImageView
                 android:id="@+id/send_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:alpha="0.4"
                 android:padding="0dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_arrow"
-                android:alpha="0.4"
-                android:layout_gravity="right"/>
+                android:src="@drawable/ic_arrow" />
 
 
         </LinearLayout>
@@ -189,8 +225,5 @@
             </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
-
-
-
 
 </RelativeLayout>
