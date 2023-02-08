@@ -1,26 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewIncomeActivity">
 
-    <TextView
-        android:id="@+id/incomeLabel"
-        android:layout_width="wrap_content"
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewIncomeActivity">
+
+    <LinearLayout
+        android:id="@+id/income_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Income"
-        app:fontFamily="sans-serif-medium"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Income"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/income_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LKR 300"
+            android:textColor="@color/red"
+            android:textSize="52sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/txtIncome"
+        android:id="@+id/recyclerview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rs.50000"
-        app:fontFamily="sans-serif-medium"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_below="@+id/income_layout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Transactions"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recyclerview_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="Add new income"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_add"
+        app:borderWidth="0dp"
+        app:tint="@color/white" />
+
+</RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
