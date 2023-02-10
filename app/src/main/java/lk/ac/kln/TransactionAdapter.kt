@@ -17,7 +17,7 @@ class TransactionAdapter(private var transactions: List<Transaction>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_view_income, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.transaction_layout, parent, false)
         return TransactionHolder(view)
     }
 
