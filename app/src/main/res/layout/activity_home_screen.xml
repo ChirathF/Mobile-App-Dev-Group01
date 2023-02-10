@@ -53,7 +53,7 @@
         android:clickable="true"
         app:cardBackgroundColor="@color/purple_200"
         app:cardCornerRadius="12dp"
-        app:cardElevation="1dp">
+        app:cardElevation="8dp">
 
 
         <LinearLayout
@@ -110,6 +110,7 @@
             android:layout_marginBottom="1dp">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/income_layout_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -166,6 +167,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/expense_layout_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
