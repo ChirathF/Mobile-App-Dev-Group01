@@ -27,7 +27,8 @@
             android:textSize="48sp"
             android:textStyle="bold"
             app:emojiCompatEnabled="false"
-            app:fontFamily="@font/allan" />
+            app:fontFamily="@font/allan"
+            android:textColor="@color/grey"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +38,8 @@
             android:text="@string/sub_title"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:fontFamily="@font/allan" />
+            app:fontFamily="@font/allan"
+            android:textColor="@color/grey"/>
 
     </RelativeLayout>
 
