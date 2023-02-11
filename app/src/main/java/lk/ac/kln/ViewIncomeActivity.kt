@@ -7,10 +7,13 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class ViewIncomeActivity : AppCompatActivity() {
-    private lateinit var transactions: ArrayList<IncomeTransaction>
+    private lateinit var transactions: List<Transaction>
     private lateinit var transactionAdapter: IncomeTransactionAdapter
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var db : AppDatabase
@@ -22,12 +25,11 @@ class ViewIncomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_income)
         recyclerView = findViewById(R.id.income_recyclerview)
 
-        transactions = arrayListOf(
-            IncomeTransaction("Salary", 40000.0F),
-            IncomeTransaction("Donation", 5000.0F),
-            IncomeTransaction("Interest", 600.0F),
+        db = Room.databaseBuilder(this,
+            AppDatabase::class.java,
+            "transactions").build()
 
-            )
+        transactions = listOf()
 
         transactionAdapter = IncomeTransactionAdapter(transactions)
         linearLayoutManager = LinearLayoutManager(this)
@@ -36,14 +38,30 @@ class ViewIncomeActivity : AppCompatActivity() {
             adapter = transactionAdapter
             layoutManager = linearLayoutManager
         }
-        updateIncomeDashboard()
+        fetchAll()
         viewAddIncome()
+    }
+    private fun fetchAll() {
+        GlobalScope.launch {
+            //test values
+            val trDao = db.transactionDao()
+//            val tr = Transaction(0, "test", 40.0, "des");
+//            val tr1 = Transaction(0, "test", -20.0, "des")
+//            trDao.insertAll(tr)
+//            trDao.insertAll(tr1)
+            transactions = db.transactionDao().getAllIncome()
+
+            runOnUiThread {
+                updateIncomeDashboard()
+                transactionAdapter.setData(transactions)
+            }
+        }
     }
 
     //Show Total Income
     private fun updateIncomeDashboard(){
         val incomeValue = findViewById<TextView>(R.id.income_value)
-        val incomeAmount = transactions.filter { it.amount>0 }.map {it.amount}.sum()
+        val incomeAmount = transactions.filter { it.Amount>0 }.map {it.Amount}.sum()
 
         incomeValue.text = "LKR %.2f".format(incomeAmount)
     }
