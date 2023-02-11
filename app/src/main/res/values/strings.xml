@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Budget Tracker App</string>
+    <string name="sub_title">Track your all transactions</string>
+    <string name="transactions">TRANSACTIONS</string>
+    <string name="total_balance">Total Balance</string>
+    <string name="income">Income</string>
+    <string name="total_income">Total Income</string>
+    <string name="add_income">Add Income</string>
+    <string name="expense">Expense</string>
+    <string name="total_expense">Total Expense</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="add">Add</string>
 </resources>
