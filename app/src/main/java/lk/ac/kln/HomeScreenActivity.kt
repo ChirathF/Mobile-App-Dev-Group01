@@ -45,12 +45,12 @@ class HomeScreenActivity : AppCompatActivity() {
         }
 
         binding.incomeLayoutCard.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ViewIncomeActivity::class.java)
             startActivity(intent)
         }
 
         binding.expenseLayoutCard.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ViewExpenseActivity::class.java)
             startActivity(intent)
         }
     }
