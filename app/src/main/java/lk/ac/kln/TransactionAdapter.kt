@@ -25,21 +25,16 @@ class TransactionAdapter(private var transactions: List<Transaction>) :
         val transaction = transactions[position]
         val context = holder.amount.context
 
-//        if (transaction.amount >= 0) {
-//            holder.amount.text = "+ $%.2f".format(transaction.amount)
-//            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.green))
-//        } else {
-//            holder.amount.text = "- $%.2f".format(Math.abs(transaction.amount))
-//            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.red))
-//        }
-//
-//        holder.label.text = transaction.label
-//
-//        holder.itemView.setOnClickListener {
-//            val intent = Intent(context, DetailedActivity::class.java)
-//            intent.putExtra("transaction", transaction)
-//            context.startActivity(intent)
-//        }
+        if (transaction.Amount >= 0) {
+            holder.amount.text = "+ $%.2f".format(transaction.Amount)
+            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.purple_200))
+        } else {
+            holder.amount.text = "- $%.2f".format(Math.abs(transaction.Amount))
+            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.red))
+        }
+
+        holder.label.text = transaction.Label
+
     }
 
     override fun getItemCount(): Int {
