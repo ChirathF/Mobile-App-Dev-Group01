@@ -32,8 +32,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
             android:text="Track your all transactions"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -118,7 +118,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:clickable="true"
-                app:cardBackgroundColor="@color/teal_700"
+                app:cardBackgroundColor="@color/green"
                 app:cardCornerRadius="12dp"
                 android:layout_weight="1"
                 android:gravity="center">
@@ -175,7 +175,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:clickable="true"
-                app:cardBackgroundColor="@color/teal_200"
+                app:cardBackgroundColor="@color/red"
                 app:cardCornerRadius="12dp"
                 android:layout_weight="1"
                 android:gravity="center">
