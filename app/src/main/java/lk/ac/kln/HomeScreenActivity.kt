@@ -3,11 +3,8 @@ package lk.ac.kln
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.room.Room
-
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.util.*
-
 import android.content.Intent
 import android.view.View
 import lk.ac.kln.databinding.ActivityHomeScreenBinding
@@ -31,7 +28,7 @@ class HomeScreenActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.balanceLayoutCard.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ViewTransaction::class.java)
             startActivity(intent)
         }
 
