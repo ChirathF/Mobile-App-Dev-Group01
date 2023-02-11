@@ -7,25 +7,25 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ViewIncomeActivity : AppCompatActivity() {
-    private lateinit var transactions: ArrayList<ExpenseTransaction>
-    private lateinit var transactionAdapter: ExpenseTransactionAdapter
+    private lateinit var transactions: ArrayList<IncomeTransaction>
+    private lateinit var transactionAdapter: IncomeTransactionAdapter
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var db : AppDatabase
     private lateinit var recyclerView: RecyclerView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState)git
         setContentView(R.layout.activity_view_income)
         recyclerView = findViewById(R.id.income_recyclerview)
 
         transactions = arrayListOf(
-            ExpenseTransaction("Salary", 40000.0F),
-            ExpenseTransaction("Donation", 5000.0F),
-            ExpenseTransaction("Interest", 600.0F),
+            IncomeTransaction("Salary", 40000.0F),
+            IncomeTransaction("Donation", 5000.0F),
+            IncomeTransaction("Interest", 600.0F),
 
             )
 
-        transactionAdapter = ExpenseTransactionAdapter(transactions)
+        transactionAdapter = IncomeTransactionAdapter(transactions)
         linearLayoutManager = LinearLayoutManager(this)
 
         recyclerView.apply {
