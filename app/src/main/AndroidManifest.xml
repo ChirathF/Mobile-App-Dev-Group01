@@ -37,6 +37,9 @@
             android:name=".ViewIncomeActivity"
             android:exported="false" />
         <activity
+            android:name=".ViewTransaction"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreenActivity"
             android:exported="true">
             <intent-filter>
