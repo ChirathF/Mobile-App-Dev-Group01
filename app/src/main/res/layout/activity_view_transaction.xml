@@ -32,19 +32,18 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Total Balance"
-          android:textAllCaps="true"
+          android:text="@string/total_balance"
           android:textStyle="bold"
           android:textSize="20sp"
-          android:layout_gravity="center"/>
+          android:layout_gravity="center" />
       <TextView
           android:id="@+id/balance"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="$300"
+          android:text="LKR 0"
           android:textSize="32sp"
           android:textStyle="bold"
-          android:layout_gravity="center"/>
+          android:layout_gravity="center" />
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -75,17 +74,17 @@
               android:id="@+id/budget"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="$400"
+              android:text="LKR 0"
               android:textStyle="bold"
               android:textSize="32sp"
               android:gravity="center"
-              android:textColor="@color/teal_200"/>
+ 
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Budget"
+              android:text="@string/income"
               android:textSize="17sp"
-              android:textAllCaps="true"/>
+              android:textColor="@color/green"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -98,7 +97,7 @@
               android:id="@+id/expense"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="$400"
+              android:text="LKR 0"
               android:textStyle="bold"
               android:textSize="32sp"
               android:gravity="center"
@@ -106,9 +105,9 @@
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Expense"
+              android:text="@string/expense"
               android:textSize="17sp"
-              android:textAllCaps="true"/>
+              android:textColor="@color/red"/>
         </LinearLayout>
       </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -117,13 +116,13 @@
         android:id="@+id/recyclerview_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Transactions"
-        android:textStyle="bold"
-        android:textSize="17sp"
-        android:textAllCaps="true"
         android:layout_below="@id/dashboard"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="10dp" />
+        android:text="@string/transactions"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
