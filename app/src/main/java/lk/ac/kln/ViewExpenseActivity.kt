@@ -2,6 +2,7 @@ package lk.ac.kln
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,6 +12,7 @@ class ViewExpenseActivity : AppCompatActivity() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var db : AppDatabase
     private lateinit var recyclerView: RecyclerView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,10 +37,13 @@ class ViewExpenseActivity : AppCompatActivity() {
             adapter = transactionAdapter
             layoutManager = linearLayoutManager
         }
+        updateExpenseDashboard()
+    }
 
+    private fun updateExpenseDashboard(){
+        val expenseValue = findViewById<TextView>(R.id.expense_value)
+        val expenseAmount = transactions.filter { it.amount<0 }.map {it.amount}.sum()
 
-
-
-
+        expenseValue.text = "LKR %.2f".format(expenseAmount)
     }
 }

@@ -38,7 +38,7 @@
             android:id="@+id/expense_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LKR 300"
+            android:text="LKR 200"
             android:textColor="@color/red"
             android:textSize="52sp"
             android:textStyle="bold" />
