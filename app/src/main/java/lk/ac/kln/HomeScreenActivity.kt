@@ -50,7 +50,7 @@ class HomeScreenActivity : AppCompatActivity() {
         }
 
         binding.expenseLayoutCard.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ViewExpenseActivity::class.java)
             startActivity(intent)
         }
     }

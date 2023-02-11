@@ -9,10 +9,13 @@ class ViewExpenseActivity : AppCompatActivity() {
     private lateinit var transactions: ArrayList<ExpenseTransaction>
     private lateinit var transactionAdapter: ExpenseTransactionAdapter
     private lateinit var layoutManager: LinearLayoutManager
+    private lateinit var db : AppDatabase
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_expense)
+        recyclerView = findViewById(R.id.expense_recyclerview)
 
         transactions = arrayListOf(
             ExpenseTransaction("Home Rent", -12000.0F),
@@ -29,10 +32,10 @@ class ViewExpenseActivity : AppCompatActivity() {
         transactionAdapter = ExpenseTransactionAdapter(transactions)
         layoutManager = LinearLayoutManager(this)
 
-//        expense_recyclerview.apply {
-//            adapter = transactionAdapter
-//            layoutManager = linearLayoutManager
-//        }
+        recyclerView.apply {
+            adapter = transactionAdapter
+            layoutManager = layoutManager
+        }
 
 
 
