@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.google.android.material.snackbar.Snackbar
-//import kotlinx.android.synthetic.main.activity_add_transaction.*
-//import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import lk.ac.kln.databinding.ActivityViewTransactionBinding
@@ -37,6 +35,10 @@ class ViewTransaction : AppCompatActivity() {
         var view : View = binding.getRoot()
         setContentView(view)
 
+        binding.backBtnTr.setOnClickListener {
+            val intent = Intent(this, HomeScreenActivity::class.java)
+            startActivity(intent)
+        }
 
         transactions = arrayListOf()
 
