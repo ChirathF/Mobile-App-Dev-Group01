@@ -8,20 +8,20 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class ExpenseTransactionAdapter (private var transactions: List<Transaction>):
-    RecyclerView.Adapter<ExpenseTransactionAdapter.ExpenseTransactionHolder>() {
+class IncomeTransactionAdapter (private var transactions: List<Transaction>):
+    RecyclerView.Adapter<IncomeTransactionAdapter.IncomeTransactionHolder>() {
 
-    class ExpenseTransactionHolder(view: View): RecyclerView.ViewHolder(view){
+    class IncomeTransactionHolder(view: View): RecyclerView.ViewHolder(view){
         val label: TextView = view.findViewById(R.id.label)
         val amount: TextView = view.findViewById(R.id.amount)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExpenseTransactionHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IncomeTransactionHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.expense_transatction_layout, parent, false)
-        return  ExpenseTransactionHolder(view)
+        return  IncomeTransactionHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ExpenseTransactionHolder, position: Int) {
+    override fun onBindViewHolder(holder: IncomeTransactionHolder, position: Int) {
         val transaction = transactions[position]
         val context: Context = holder.amount.context
 
