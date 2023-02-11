@@ -7,6 +7,14 @@ interface TransactionDao {
     @Query("SELECT * from transactions")
     fun getAll(): List<Transaction>
 
+    //Query for getting all income transactions
+    @Query("SELECT * from transactions where amount > 0")
+    fun getAllIncome(): List<Transaction>
+
+    //Query for getting all expense transactions
+    @Query("SELECT * from transactions where amount < 0")
+    fun getAllExpense(): List<Transaction>
+
     @Insert
     fun insertAll(vararg transaction: Transaction)
 
