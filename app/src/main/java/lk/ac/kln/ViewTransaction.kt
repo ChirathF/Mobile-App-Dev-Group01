@@ -31,6 +31,10 @@ class ViewTransaction : AppCompatActivity() {
         setContentView(R.layout.activity_view_transaction)
         recyclerView = findViewById(R.id.recyclerview)
 
+        db = Room.databaseBuilder(this,
+            AppDatabase::class.java,
+            "transactions").build()
+
         binding = ActivityViewTransactionBinding.inflate(getLayoutInflater())
         var view : View = binding.getRoot()
         setContentView(view)
