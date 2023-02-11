@@ -14,7 +14,7 @@ class ViewIncomeActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)git
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_income)
         recyclerView = findViewById(R.id.income_recyclerview)
 
