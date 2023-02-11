@@ -110,7 +110,7 @@ class ViewExpenseActivity : AppCompatActivity() {
         }
     }
     private fun showSnackbar(){
-        val view = findViewById<View>(R.id.coordinator)
+        val view = findViewById<View>(R.id.exp_coordinator)
         val snackbar = Snackbar.make(view, "Transaction deleted!", Snackbar.LENGTH_LONG)
         snackbar.setAction("Undo"){
             undoDelete()
