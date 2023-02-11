@@ -1,10 +1,13 @@
 package lk.ac.kln
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ViewExpenseActivity : AppCompatActivity() {
     private lateinit var transactions: ArrayList<ExpenseTransaction>
@@ -18,6 +21,7 @@ class ViewExpenseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_expense)
         recyclerView = findViewById(R.id.expense_recyclerview)
+
 
         transactions = arrayListOf(
             ExpenseTransaction("Home Rent", -12000.0F),
@@ -38,6 +42,9 @@ class ViewExpenseActivity : AppCompatActivity() {
             layoutManager = linearLayoutManager
         }
         updateExpenseDashboard()
+        viewAddExpense()
+
+
     }
 
     private fun updateExpenseDashboard(){
@@ -45,5 +52,12 @@ class ViewExpenseActivity : AppCompatActivity() {
         val expenseAmount = transactions.filter { it.amount<0 }.map {it.amount}.sum()
 
         expenseValue.text = "LKR %.2f".format(expenseAmount)
+    }
+    private fun viewAddExpense(){
+        val addButton = findViewById<FloatingActionButton>(R.id.expense_add_btn)
+        addButton.setOnClickListener{
+            val intent = Intent(this, AddExpense::class.java)
+            startActivity(intent)
+        }
     }
 }
