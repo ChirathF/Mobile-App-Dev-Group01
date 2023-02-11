@@ -2,7 +2,6 @@ package lk.ac.kln
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.room.Room
 
 import kotlinx.coroutines.GlobalScope
@@ -11,15 +10,7 @@ import java.util.*
 
 import android.content.Intent
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.launch
 import lk.ac.kln.databinding.ActivityHomeScreenBinding
-import lk.ac.kln.databinding.ActivityMainBinding
 
 
 class HomeScreenActivity : AppCompatActivity() {
