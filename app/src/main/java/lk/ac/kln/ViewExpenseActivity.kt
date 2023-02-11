@@ -46,10 +46,10 @@ class ViewExpenseActivity : AppCompatActivity() {
         GlobalScope.launch {
             //test values
             val trDao = db.transactionDao()
-            val tr= Transaction(0,"test",40.0,"des");
-            val tr1= Transaction(0,"test",-20.0,"des")
-            trDao.insertAll(tr)
-            trDao.insertAll(tr1)
+            //val tr= Transaction(0,"test",40.0,"des");
+            //val tr1= Transaction(0,"test",-20.0,"des")
+            //trDao.insertAll(tr)
+            //trDao.insertAll(tr1)
             transactions = db.transactionDao().getAllExpense()
 
             runOnUiThread {
