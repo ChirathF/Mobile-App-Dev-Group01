@@ -21,13 +21,12 @@ class AddExpense : AppCompatActivity() {
 
         addExpenseBtn=findViewById(R.id.addExpenseBtn);
         edt_label=findViewById(R.id.edt_label);
-        edt_label_amount=findViewById<EditText>(R.id.edt_label_amount);
+        edt_label_amount= findViewById<EditText>(R.id.edt_label_amount);
         edt_label_description=findViewById(R.id.edt_label_description);
 
         addExpenseBtn.setOnClickListener{
             val label=edt_label.text.toString()
-           // val amount=("-"+edt_label_amount.text.toString()).toDouble()
-            val amount=edt_label_amount.text.toString().toDouble()
+            val amount=("-".plus(edt_label_amount.text)).toString().toDouble()
             val description=edt_label_description.text.toString()
 
             if (label.isEmpty()) {
