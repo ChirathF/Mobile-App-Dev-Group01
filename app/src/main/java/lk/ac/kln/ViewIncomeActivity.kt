@@ -32,5 +32,7 @@ class ViewIncomeActivity : AppCompatActivity() {
             adapter = transactionAdapter
             layoutManager = linearLayoutManager
         }
+
+
     }
 }

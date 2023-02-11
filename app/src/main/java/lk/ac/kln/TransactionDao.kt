@@ -8,11 +8,11 @@ interface TransactionDao {
     fun getAll(): List<Transaction>
 
     //Query for getting all income transactions
-    @Query("SELECT * from transactions where amount > 0")
+    @Query("SELECT * from transactions WHERE amount > 0")
     fun getAllIncome(): List<Transaction>
 
     //Query for getting all expense transactions
-    @Query("SELECT * from transactions where amount < 0")
+    @Query("SELECT * from transactions WHERE amount < 0")
     fun getAllExpense(): List<Transaction>
 
     @Insert
