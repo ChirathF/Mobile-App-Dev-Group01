@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ViewExpenseActivity : AppCompatActivity() {
     private lateinit var transactions: ArrayList<ExpenseTransaction>
     private lateinit var transactionAdapter: ExpenseTransactionAdapter
-    private lateinit var layoutManager: LinearLayoutManager
+    private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var db : AppDatabase
     private lateinit var recyclerView: RecyclerView
 
@@ -25,16 +25,15 @@ class ViewExpenseActivity : AppCompatActivity() {
             ExpenseTransaction("Gift Item", -2000.0F),
             ExpenseTransaction("Cloths", -1800.0F),
             ExpenseTransaction("Medicine", -600.0F),
-            ExpenseTransaction("Internet", -990.0F),
 
         )
 
         transactionAdapter = ExpenseTransactionAdapter(transactions)
-        layoutManager = LinearLayoutManager(this)
+        linearLayoutManager = LinearLayoutManager(this)
 
         recyclerView.apply {
             adapter = transactionAdapter
-            layoutManager = layoutManager
+            layoutManager = linearLayoutManager
         }
 
 
