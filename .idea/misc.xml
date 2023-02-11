@@ -6,8 +6,13 @@
         <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/drawable/ic_arrow.xml" value="0.197" />
         <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
         <entry key="..\:/Android/BudgetTrackerApp/app/src/main/res/layout/activity_main.xml" value="0.17028985507246377" />
+        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/activity_add_income.xml" value="0.11277173913043478" />
+        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/activity_home_screen.xml" value="0.19427083333333334" />
+        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/activity_test.xml" value="0.11354166666666667" />
         <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/activity_view_expense.xml" value="0.264" />
-        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/activity_view_income.xml" value="0.264" />
+        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/activity_view_income.xml" value="0.1" />
+        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/expense_transatction_layout.xml" value="0.134375" />
+        <entry key="..\:/UoK/3 - sem 1/Mobile Application Development/Assignment/Mobile-App-Dev-Group01/app/src/main/res/layout/transaction_layout.xml" value="0.4" />
       </map>
     </option>
   </component>
