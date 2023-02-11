@@ -78,6 +78,7 @@
               android:textStyle="bold"
               android:textSize="32sp"
               android:gravity="center"
+              android:textColor="@color/green"/>
  
           <TextView
               android:layout_width="wrap_content"

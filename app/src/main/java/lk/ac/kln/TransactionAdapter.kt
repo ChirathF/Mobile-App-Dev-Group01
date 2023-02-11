@@ -27,7 +27,7 @@ class TransactionAdapter(private var transactions: List<Transaction>) :
 
         if (transaction.Amount >= 0) {
             holder.amount.text = "+ $%.2f".format(transaction.Amount)
-            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.purple_200))
+            holder.amount.setTextColor(ContextCompat.getColor(context, R.color.green))
         } else {
             holder.amount.text = "- $%.2f".format(Math.abs(transaction.Amount))
             holder.amount.setTextColor(ContextCompat.getColor(context, R.color.red))
