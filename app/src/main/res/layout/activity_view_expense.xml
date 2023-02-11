@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Expense"
+            android:text="@string/total_expense"
             android:textSize="40sp"
             android:textStyle="bold" />
 
@@ -48,7 +48,7 @@
         android:layout_below="@+id/expense_layout"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
-        android:text="Transactions"
+        android:text="@string/transactions"
         android:textAllCaps="true"
         android:textSize="17sp"
         android:textStyle="bold" />
