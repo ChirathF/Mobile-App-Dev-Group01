@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 300"
-            android:textColor="@color/red"
+            android:textColor="@color/teal_700"
             android:textSize="52sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -57,7 +57,7 @@
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/income_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/recyclerview_title"
@@ -77,7 +77,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="Add new income"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/teal_700"
         android:src="@drawable/ic_add"
         app:borderWidth="0dp"
         app:tint="@color/white" />
