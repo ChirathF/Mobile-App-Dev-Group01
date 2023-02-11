@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,8 +24,6 @@ class ViewTransaction : AppCompatActivity() {
     private lateinit var db : AppDatabase
     private lateinit var recyclerView: RecyclerView
 
-    private lateinit var binding:ActivityViewTransactionBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,15 +33,6 @@ class ViewTransaction : AppCompatActivity() {
         db = Room.databaseBuilder(this,
             AppDatabase::class.java,
             "transactions").build()
-
-        binding = ActivityViewTransactionBinding.inflate(getLayoutInflater())
-        var view : View = binding.getRoot()
-        setContentView(view)
-
-        binding.backBtnTr.setOnClickListener {
-            val intent = Intent(this, HomeScreenActivity::class.java)
-            startActivity(intent)
-        }
 
         transactions = arrayListOf()
 
@@ -91,13 +81,17 @@ class ViewTransaction : AppCompatActivity() {
         }
     }
     private fun updateDashboard(){
+        val totalBalance = findViewById<TextView>(R.id.balance)
+        val totalBudget = findViewById<TextView>(R.id.budget)
+        val totalExpense = findViewById<TextView>(R.id.expense)
+
         val totalAmount = transactions.map { it.Amount }.sum()
         val budgetAmount = transactions.filter { it.Amount>0 }.map{it.Amount}.sum()
         val expenseAmount = totalAmount - budgetAmount
 
-        binding.balance.text = "$ %.2f".format(totalAmount)
-        binding.budget.text = "$ %.2f".format(budgetAmount)
-        binding.expense.text = "$ %.2f".format(expenseAmount)
+        totalBalance.text = "LKR %.2f".format(totalAmount)
+        totalBudget.text = "LKR %.2f".format(budgetAmount)
+        totalExpense.text = "LKR %.2f".format(expenseAmount)
     }
 
     private fun undoDelete(){

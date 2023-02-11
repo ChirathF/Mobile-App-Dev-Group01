@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total Income"
+            android:text="@string/total_income"
             android:textSize="40sp"
             android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 300"
-            android:textColor="@color/teal_700"
+            android:textColor="@color/green"
             android:textSize="52sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -52,7 +52,7 @@
         android:layout_below="@+id/income_layout"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
-        android:text="Transactions"
+        android:text="@string/transactions"
         android:textAllCaps="true"
         android:textSize="17sp"
         android:textStyle="bold" />
@@ -78,7 +78,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="Add new income"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/green"
         android:src="@drawable/ic_add"
         app:borderWidth="0dp"
         app:tint="@color/white" />
