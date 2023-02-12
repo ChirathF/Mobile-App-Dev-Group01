@@ -10,7 +10,7 @@
         android:id="@+id/add_income"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Income"
+        android:text="@string/add_income"
         android:textStyle="bold"
         android:textSize="30sp"
         android:textAlignment="center"
@@ -97,7 +97,7 @@
             android:id="@+id/addIncomeBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Income"
+            android:text="@string/add"
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
             android:padding="10dp"/>
