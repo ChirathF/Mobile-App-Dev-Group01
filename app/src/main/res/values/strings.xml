@@ -10,4 +10,5 @@
     <string name="total_expense">Total Expense</string>
     <string name="add_expense">Add Expense</string>
     <string name="add">Add</string>
+    <string name="search">Search</string>
 </resources>
