@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -23,6 +24,8 @@ class ViewTransaction : AppCompatActivity() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var db : AppDatabase
     private lateinit var recyclerView: RecyclerView
+    private lateinit var search: Button
+    private lateinit var binding:ActivityViewTransactionBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +45,10 @@ class ViewTransaction : AppCompatActivity() {
         db = Room.databaseBuilder(this,
             AppDatabase::class.java,
             "transactions").build()
+
+        binding.search.setOnClickListener{
+            println("search here.")
+        }
 
         recyclerView.apply {
             adapter = transactionAdapter
@@ -133,6 +140,8 @@ class ViewTransaction : AppCompatActivity() {
             }
         }
     }
+
+
 
     override fun onResume() {
         super.onResume()
