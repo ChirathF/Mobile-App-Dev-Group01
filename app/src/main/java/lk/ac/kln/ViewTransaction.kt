@@ -46,9 +46,17 @@ class ViewTransaction : AppCompatActivity() {
             AppDatabase::class.java,
             "transactions").build()
 
-        binding.search.setOnClickListener{
+        fun searchByText(transaction: Transaction){
             println("search here.")
         }
+
+        binding.search.setOnClickListener{
+            lateinit var transaction: Transaction
+            searchByText(transaction)
+
+        }
+
+
 
         recyclerView.apply {
             adapter = transactionAdapter
